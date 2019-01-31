@@ -1,0 +1,53 @@
+CREATE TABLE Soal(
+ id_quiz	varchar (10) NOT NULL,
+ soal_quiz varchar (100) NOT NULL,
+ jawaban_quiz varchar (100) NOT NULL,
+ PRIMARY KEY (id_quiz)
+);
+
+CREATE TABLE Player(
+ id_player varchar (10) NOT NULL,
+ nama_player varchar (25) NOT NULL,
+ alamat_player varchar (50) NOT NULL,
+ no_hp int (12) NOT NULL,
+ email_player varchar (25) NOT NULL,
+ PRIMARY KEY (id_player)
+);
+
+CREATE TABLE Score(
+ id_score varchar (10) NOT NULL,
+ nilai_score int (5) NOT NULL,
+ history_score int (5) NOT NULL,
+ PRIMARY KEY (id_score)
+);
+
+CREATE TABLE Tingkat(
+ id_level varchar (10) NOT NULL,
+ nama_level varchar (10) NOT NULL,
+ PRIMARY KEY (id_level)
+);
+
+CREATE TABLE Waktu(
+ id_time varchar (10) NOT NULL,
+ total_waktu int (5) NOT NULL,
+ PRIMARY KEY (id_time)
+);
+
+CREATE TABLE Tergantung(
+ id_score2 varchar (10) NOT NULL,
+ waktu_jawab int (5) NOT NULL,
+ get_score varchar (10) NOT NULL,
+ PRIMARY KEY (id_score2)
+);
+
+CREATE TABLE Admin(
+ id_admin varchar (10) NOT NULL,
+ nama_admin varchar (25) NOT NULL,
+ no_admin int(12) NOT NULL,
+ email_admin varchar (25) NOT NULL,
+ alamat_admin varchar (25) NOT NULL,
+ PRIMARY KEY (id_admin)
+);
+
+ALTER TABLE `pembayaran` ADD FOREIGN KEY (`id_akun`) REFERENCES `customer`(`id_akun`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QUBIC GAMES</title>
+  <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+
+<body>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" method="get" action="index.html">
+    <div class="container">
+      <h1>REGISTER</h1>
+      <h5>Please fill in this form to create an account.</h5>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">REGISTER</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">CANCEL</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>QUBIC GAMES</h1>
+    <p>Deskripsi nunggu abi</p>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">REGISTER TO PLAY</button>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+</body>
+</html>
+

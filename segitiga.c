@@ -16,7 +16,9 @@ int main(){
     printf("Masukkan nilai c : ");
     scanf("%f", &c);
 
-    cekNegatif(a, b, c);
+    if (cekNegatif(a, b, c)){
+        cekSisi(a, b, c);
+    }
 
 }
 

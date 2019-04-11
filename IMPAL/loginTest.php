@@ -1,13 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 
-// if(!isset($_SESSION["user"])) header("Location: login.php");
-
-
-class auth{
+class authTest extends TestCase{
     private $db;
     private $error;
-    function __construst($db_conn){
+    function testCanBeCreatedFromValidAuth(): void
+    {
         $this->db = $db_conn;
         session_start();
     }
